@@ -1,5 +1,5 @@
 import NavBar from "../components/navbar";
-import ProjectPage from "../components/projectsPage";
+import ProjectPage from "../components/ProjectsPage";
 
 function Project() {
   return (
