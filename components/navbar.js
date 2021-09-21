@@ -9,9 +9,9 @@ function NavBar() {
           <Image src="/Logo.svg" height="50" width="60" alt="Logo" />
         </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label className="menu-icon" for="menu-btn">
+        {/* <label className="menu-icon" for="menu-btn">
           <span className="navicon"></span>
-        </label>
+        </label> */}
         <ul className="menu">
           <li>
             <Link href="/">
