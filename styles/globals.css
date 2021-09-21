@@ -1,0 +1,503 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 110vh;
+
+  background: linear-gradient(
+    180deg,
+    #4864ac 0%,
+    rgba(72, 100, 172, 0.9375) 44.74%
+  );
+  background-size: auto;
+  border: 0.1px solid #4864ac;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  display: inline-flex;
+  justify-content: center;
+  padding: 14px 16px;
+  font-family: Sora;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.nav {
+  position: absolute;
+  left: 733px;
+  top: 30px;
+}
+@media screen and (max-width: 1250px) {
+  body {
+    background: linear-gradient(
+      180deg,
+      #4864ac 0%,
+      rgba(72, 100, 172, 0.9375) 44.74%
+    );
+    background-size: auto;
+  }
+  .nav {
+    position: absolute;
+
+    left: 170px;
+    top: 30px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    background: linear-gradient(
+      180deg,
+      #4864ac 0%,
+      rgba(72, 100, 172, 0.9375) 44.74%
+    );
+  }
+
+  .nav {
+    top: 95px;
+    left: 10%;
+  }
+}
+.header {
+  position: fixed;
+  width: 100%;
+
+  z-index: 3;
+  background-color: #20186d;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  color: white;
+
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: #31d898;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  /* background-color: #1a243d; */
+  overflow: hidden;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+
+  display: inline-flex;
+  float: right;
+  padding: 38px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2.5px;
+
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 22px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+.content {
+  position: absolute;
+  display: flex;
+  top: 40%;
+  left: 45%;
+
+  width: 50%;
+}
+
+.homepage {
+  width: 95%;
+  height: 50%;
+  position: absolute;
+  left: 20px;
+  top: 150px;
+  right: 50px;
+  display: flex;
+}
+
+.Skills {
+  position: absolute;
+  top: 80px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  color: #20186d;
+  font-family: Sora;
+
+  font-size: 52px;
+  background: white;
+  background-size: auto;
+}
+
+.SkillsContent {
+  position: absolute;
+  top: 250px;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  display: block;
+  padding-left: 40px;
+  font-family: Sora;
+  color: #20186d;
+  background: white;
+  background-size: auto;
+}
+.container {
+  width: 90%; /* Full width */
+  background-color: #ddd; /* Grey background */
+  border-radius: 20px;
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+  border-radius: 20px;
+}
+.html {
+  width: 90%;
+  background-color: #04aa6d;
+  padding-right: 10px;
+} /* Green */
+.css {
+  width: 80%;
+  background-color: #2196f3;
+  padding-right: 10px;
+} /* Blue */
+.javascript {
+  width: 65%;
+  background-color: #f44336;
+  padding-right: 10px;
+} /* Red */
+.django {
+  width: 70%;
+  background-color: forestgreen;
+  padding-right: 10px;
+}
+.react {
+  width: 70%;
+  background-color: black;
+  padding-right: 10px;
+}
+.cpp {
+  width: 80%;
+  background-color: blue;
+  padding-right: 10px;
+}
+.next {
+  width: 60%;
+  background-color: brown;
+  padding-right: 10px;
+}
+.figma {
+  width: 80%;
+  background-color: red;
+  padding-right: 10px;
+}
+.flutter {
+  width: 90%;
+  background-color: lightpink;
+  padding-right: 10px;
+}
+.python {
+  width: 70%;
+  background-color: purple;
+  padding-right: 10px;
+}
+.Projects {
+  position: absolute;
+  top: 80px;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  color: #31d898;
+  font-family: Sora;
+  padding-bottom: 50px;
+  font-size: 52px;
+  background: #20186d;
+}
+.ProjectContent {
+  margin-left: -10px;
+  font-size: 70px;
+}
+.ProjectItem {
+  background-color: #fff;
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 30px;
+
+  border-radius: 20px;
+  border: 1px solid black;
+
+  height: 250px;
+  width: 300px;
+}
+.ProjectItem:hover {
+  background-color: orange;
+  color: white;
+}
+.ProjectImage {
+  height: 110px;
+  width: 270px;
+  background-color: black;
+  border-radius: 20px;
+  margin: 10px 13px;
+}
+.ProjectItemContent {
+  height: 110px;
+  width: 270px;
+
+  border-radius: 20px;
+  border: 1px solid black;
+  margin: 10px 13px;
+}
+.ProjectItemContent p {
+  font-size: 30px;
+}
+.About {
+  width: 80%;
+  border: 3px solid green;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: absolute;
+  font-size: 20px;
+  top: 220px;
+  left: 10%;
+}
+.headerAbout {
+  font-family: Sora;
+  position: absolute;
+  top: 90px;
+  font-size: 52px;
+  color: #31d898;
+
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.ProfilePhoto {
+  display: flex;
+  width: 50%;
+
+  margin: 10px auto;
+  align-items: center;
+  height: 10%;
+  top: 50px;
+  left: 25%;
+  justify-content: center;
+  justify-items: center;
+  position: absolute;
+}
+.Content1 {
+  position: absolute;
+
+  top: 150px;
+  margin-left: 140px;
+  font-family: Sora;
+  font-size: 20px;
+  display: inline-block;
+  font-weight: bold;
+  color: #04aa6d;
+}
+@media screen and (max-width: 900px) {
+  .Content1 {
+    margin: auto;
+    font-size: 15px;
+  }
+  .About {
+    height: 500px;
+  }
+}
+.Content2 {
+  padding-top: 10px;
+
+  display: flex;
+  justify-content: center;
+}
+.Linkedin {
+  background-color: #47c5fb;
+  color: white;
+  margin-right: 25px;
+  border-radius: 10px;
+  height: 40px;
+  font-family: Sora;
+}
+.Facebook {
+  background-color: #1e40f2;
+  color: white;
+  font-family: Sora;
+  margin-right: 25px;
+  border-radius: 10px;
+  height: 40px;
+}
+.Github {
+  background-color: black;
+  color: white;
+  font-family: Sora;
+  border-radius: 10px;
+  height: 40px;
+}
+.Contact {
+  width: 80%;
+  border: 3px solid green;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  position: absolute;
+  top: 220px;
+  left: 10%;
+  font-family: Sora;
+  color: #04aa6d;
+}
+
+.ContactContent {
+  display: flex;
+  position: absolute;
+  border: 1px solid black;
+  width: 70%;
+  height: 90%;
+  margin-top: 30px;
+  font-size: 20px;
+  margin-left: 15%;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+}
+.Name {
+  padding: 5px 0px;
+  margin: 10px 60px;
+}
+.Email {
+  padding: 5px 0px;
+  margin: 10px 60px;
+}
+.Message {
+  padding: 5px 0px;
+  margin: 10px 60px;
+}
+.Label {
+  margin: 0px 60px;
+}
+.SubmitForm {
+  margin: 10px 20px;
+  padding: 20px 10px;
+  font-family: Sora;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #20186d;
+}
