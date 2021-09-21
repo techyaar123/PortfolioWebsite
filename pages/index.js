@@ -6,12 +6,10 @@ function Home() {
     <div>
       <NavBar />
       <div className="homepage">
-        <Image
-          src="/Home Text.svg "
-          height="900px"
-          width="1100px"
-          alt="Home Text"
-        />
+        <div className="homeContent">
+          <h1>Hi , I am Abhinav</h1>
+          <h3>I am Full Stack and Mobile Developer</h3>
+        </div>
 
         <Image
           src="/Home Pic.svg"
