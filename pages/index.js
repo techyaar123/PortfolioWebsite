@@ -7,7 +7,7 @@ function Home() {
       <NavBar />
       <div className="homepage">
         <Image
-          src="/Home Text.svg"
+          src="/Home Text.svg "
           height="900px"
           width="1100px"
           alt="Home Text"
